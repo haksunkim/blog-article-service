@@ -1,12 +1,9 @@
 # blog-article-microservice
 Spring Boot microservice providing Articles
 
-This service will be turned into microservice talking to middleware service with AMQP(RabbitMQ).
-Currently providing REST API for articles (e.g. /articles, /articles/1 and so on)
-
-By default, listening port 3500.
+This is microservice written in Spring Boot.
+This service gets message from blog-middleware and return JSON string as a response.
 
 TODO List
-1. remove REST API, and turn into microservice listening queue
-2. implement pagination
-3. implement search by tag, user
+1. implement pagination
+2. implement search by tag, user

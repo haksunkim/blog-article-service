@@ -2,6 +2,7 @@ package com.haksunkim.blog.service.article.domain;
 
 import java.sql.Timestamp;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,16 +14,16 @@ public class Article {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 	
 	private String title;
 	@Lob
 	private String content;
-	private int createdBy;
+	private Long createdBy;
 	private Timestamp createdAt;
-	private int modifiedBy;
+	private Long modifiedBy;
 	private Timestamp modifiedAt;
-	private int deletedBy;
+	private Long deletedBy;
 	private Timestamp deletedAt;
 	private String tags;
 	
@@ -42,10 +43,10 @@ public class Article {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public int getCreatedBy() {
+	public Long getCreatedBy() {
 		return createdBy;
 	}
-	public void setCreatedBy(int createdBy) {
+	public void setCreatedBy(Long createdBy) {
 		this.createdBy = createdBy;
 	}
 	public Timestamp getCreatedAt() {
@@ -54,10 +55,10 @@ public class Article {
 	public void setCreatedAt(Timestamp createdAt) {
 		this.createdAt = createdAt;
 	}
-	public int getModifiedBy() {
+	public Long getModifiedBy() {
 		return modifiedBy;
 	}
-	public void setModifiedBy(int modifiedBy) {
+	public void setModifiedBy(Long modifiedBy) {
 		this.modifiedBy = modifiedBy;
 	}
 	public Timestamp getModifiedAt() {
@@ -66,10 +67,10 @@ public class Article {
 	public void setModifiedAt(Timestamp modifiedAt) {
 		this.modifiedAt = modifiedAt;
 	}
-	public int getDeletedBy() {
+	public Long getDeletedBy() {
 		return deletedBy;
 	}
-	public void setDeletedBy(int deletedBy) {
+	public void setDeletedBy(Long deletedBy) {
 		this.deletedBy = deletedBy;
 	}
 	public Timestamp getDeletedAt() {
